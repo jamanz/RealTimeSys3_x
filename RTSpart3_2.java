@@ -92,7 +92,8 @@ public class Lab32Fragment extends Fragment implements View.OnClickListener {
             }
             resultMessage.setText(reason);
         }
-
+	long totalExecTimeMcs = (System.nanoTime() - startTime);
+	createAlert(view, "Total execution time: " + totalExecTimeMcs);
     }
 
     private boolean isDone() {
